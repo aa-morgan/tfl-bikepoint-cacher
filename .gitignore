@@ -1,0 +1,6 @@
+credentials.json
+token.json
+data/*
+tmp/*
+DS_Store*
+*.ipynb_checkpoints
