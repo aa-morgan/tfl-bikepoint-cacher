@@ -1,6 +1,10 @@
 credentials.json
 token.json
-data/*
-tmp/*
-DS_Store*
+*/zip_data/*
+*/tmp_data/*
+*.DS_Store*
 *.ipynb_checkpoints
+*build/*
+*dist/*
+*.egg-info*
+*dev_*
