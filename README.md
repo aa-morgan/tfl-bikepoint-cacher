@@ -1,26 +1,27 @@
+
 TfL BikePoint Cacher
 ===============
-TfL provides endpoints for data relating to the Santandar Cycles through their [Unified API](tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-5). The available endpoints are,
+TfL provides endpoints for data feeds relating to the Santandar Cycles through their [Unified API](https://tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-5). The available endpoints are,
 
-- /BikePoint
-- /Place
-- /Journey
-- /AccidentStats
+	/BikePoint
+	/Place
+	/Journey
+	/AccidentStats
 
 You can also download historical [journey information](http://cycling.data.tfl.gov.uk/) which includes,
 
--   Journey ID
--   Bike ID
--   Start date
--   Start time
--   End date
--   End time
--   Start docking station
--   Start docking station ID
--   End docking station
--   End docking station ID 
+	- Journey ID
+	- Bike ID
+	- Start date
+	- Start time
+	- End date
+	- End time
+	- Start docking station
+	- Start docking station ID
+	- End docking station
+	- End docking station ID 
 
-However, you can't download historical information on the number of available bikes, and docking stations. This information is only available through the [Unified API](tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-5) but provides only the current values. 
+However, you can't download historical information on the number of available bikes, and docking stations. This information is only available through the [Unified API](https://tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-5) but provides only the current values. 
 
 This library was created to be able to continuously call the TfL /BikePoint endpoint, and save the 'NbBikes', 'NbDocks', and 'NbEmptyDocks' values to a permanent cloud storage (in this case Google Drive).
 
