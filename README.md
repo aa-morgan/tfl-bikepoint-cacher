@@ -30,14 +30,21 @@ I will be running this cacher on a Raspberry Pi, uploading the data to a dedicat
 Install
 -------
 
-Install using `setuptools`,
+1. Install using `setuptools`,
 ```bash
 git clone https://github.com/aa-morgan/tfl-bikepoint-cacher.git
 cd tfl-bikepoint-cacher
 python setup.py install
 ```
 
-Obtain an `api_id` and `api_key` from the ([`TfL developer site`](https://api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
+2. Setup authorisation for Google Drive,
+    a. Go to [credentials page](https://console.developers.google.com/apis/credentials)
+    b. Click `Create credentials` of type `OAuth client ID` with application type `Other`
+    c. Under `OAuth 2.0 client IDs` download the credentials file
+    d. Rename credentials file to `credentials.json`
+    e. Place `credentials.json` in the working directory of the `bikepoint_cacher.py` script (or `bikepoint_cacher.ipynb` notebook)
+
+3. Obtain an `api_id` and `api_key` from the ([`TfL developer site`](https://api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
 
 Basic usage
 -------
