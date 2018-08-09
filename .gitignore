@@ -7,4 +7,4 @@ token.json
 *build/*
 *dist/*
 *.egg-info*
-*dev_*
+*__dev__*

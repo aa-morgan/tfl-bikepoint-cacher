@@ -9,7 +9,8 @@ setup(name='TfL-BikePoint-Cacher',
         license='GPL-3.0',
         packages=['bikepointcacher'],
         install_requires=[
-            'tqdm'
+            'tqdm',
+            'pandas'
         ],
         include_package_data=True,
         zip_safe=False)

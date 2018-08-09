@@ -155,7 +155,7 @@ def csv_to_gzip(tmp_data_dir, zip_data_dir, verbose=True):
             if df is None:
                 df=tmp_df
             else:
-                df = df.append(tmp_df)
+                df = df.append(tmp_df, sort=False)
 
     # Convert to MultiIndex DataFrame
     index = [np.repeat(timestamps,3),
