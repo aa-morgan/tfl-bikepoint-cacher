@@ -38,11 +38,12 @@ python setup.py install
 ```
 
 2. Setup authorisation for Google Drive,
-* Go to [credentials page](https://console.developers.google.com/apis/credentials)
-* Click `Create credentials` of type `OAuth client ID` with application type `Other`
-* Under `OAuth 2.0 client IDs` download the credentials file
-* Rename credentials file to `credentials.json`
-* Place `credentials.json` in the working directory of the `bikepoint_cacher.py` script (or `bikepoint_cacher.ipynb` notebook)
+
+    * Go to [credentials page](https://console.developers.google.com/apis/credentials)
+    * Click `Create credentials` of type `OAuth client ID` with application type `Other`
+    * Under `OAuth 2.0 client IDs` download the credentials file
+    * Rename credentials file to `credentials.json`
+    * Place `credentials.json` in the working directory of the `bikepoint_cacher.py` script (or `bikepoint_cacher.ipynb` notebook)
 
 3. Obtain an `api_id` and `api_key` from the ([`TfL developer site`](https://api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
 
