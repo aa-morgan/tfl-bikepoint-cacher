@@ -37,7 +37,7 @@ cd tfl-bikepoint-cacher
 python setup.py install
 ```
 
-Obtain an `api_id` and `api_key` from the ([`TfL developer site`](api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
+Obtain an `api_id` and `api_key` from the ([`TfL developer site`](https://api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
 
 Basic usage
 -------
