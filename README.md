@@ -25,7 +25,7 @@ However, you can't download historical information on the number of available bi
 
 This library was created to be able to continuously call the TfL `/BikePoint` endpoint, and save the `NbBikes`, `NbDocks`, and `NbEmptyDocks` values to a permanent cloud storage (in this case Google Drive).
 
-I will be running this cacher on a Raspberry Pi, uploading the data to a dedicated Google Drive account, and making this data available through a link which will shortly be posted on this GitHub repository.
+I will be running this cacher, uploading the data to a dedicated Google Drive account, and making this data available through a link which will shortly be posted on this GitHub repository.
 
 Install
 -------
@@ -40,14 +40,14 @@ python setup.py install
 2. Setup authorisation for Google Drive,
 
     * Go to [credentials page](https://console.developers.google.com/apis/credentials)
-    * Click `Create credentials` of type `OAuth client ID` with application type `Other`
+    * Click `Create credentials`, choose type `OAuth client ID` and application type `Other`
     * Under `OAuth 2.0 client IDs` download the credentials file
     * Rename credentials file to `credentials.json`
-    * Place `credentials.json` in the working directory of the `bikepoint_cacher.py` script (or `bikepoint_cacher.ipynb` notebook)
+    * Place `credentials.json` in the `config/` directory
 
 3. Obtain an `api_id` and `api_key` from the ([`TfL developer site`](https://api.tfl.gov.uk)), and copy them into the `config/config.txt` configuration file.
 
-4. The first time you run this code you will be prompted to grant access to your Google Drive. Once granted, a `token.json` file will appear in the `config/` directory. This step fails if you run the code through a Jupyter notebook, therefore in order to obtain the `token.json` you must run the Python script,
+4. The first time you run this code you will be prompted to grant access to your Google Drive. Once granted, a `token.json` file will appear in the `config/` directory. This step fails if you run the code through a Jupyter notebook, therefore in order to obtain the `token.json` file you must run the Python script,
 
 ```bash
 python bikepoint_cacher.py
