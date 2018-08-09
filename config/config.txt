@@ -1,0 +1,16 @@
+[TFL]
+api_id = xxxxxxxx
+api_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+[GOOGLE]
+credentials_filepath = ../config/credentials.json
+token_filepath = ../config/token.json
+
+[PARAMS]
+upload_loop_wait_time = 60
+download_loop_wait_time = 5
+units = minutes
+upload_loops = -1
+tmp_data_dir = tmp_data
+zip_data_dir = zip_data
+verbose = True

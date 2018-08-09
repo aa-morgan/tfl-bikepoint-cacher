@@ -52,39 +52,26 @@ Basic usage
 Import libraries,
 ```python
 from bikepointcacher import BikePointCacher, mkdir_GDrive
-import configparser
 ```
-Load TfL Unified API credentials from `config.txt` file, 
+Define `config.txt` filepath,
 ```python
-config = configparser.ConfigParser()
-config.read('../__dev__config.txt')
-api_id = config['TFL']['api_id']
-api_key = config['TFL']['api_key']
+config_filepath = '../config/config.txt'
 ```
 
 Make remote Google Drive folder,
 ```python
-remote_folder_path = 'data'
+remote_folder_path = 'TfL_bikepoint_cache'
 remote_folder_id = mkdir_GDrive(remote_folder_path)
 ```
 
 Instantiate `BikePointCacher` object,
 ```python
-cacher = BikePointCacher(api_id, api_key)
-```
-
-Load `BikePointCacher` parameters from `config.txt` file,
-```python
-upload_loop_wait_time = int(config['PARAMS']['upload_loop_wait_time'])
-download_loop_wait_time = int(config['PARAMS']['download_loop_wait_time'])
-units = config['PARAMS']['units']
-upload_loops = int(config['PARAMS']['upload_loops'])
+cacher = BikePointCacher(config_filepath, remote_folder_id)
 ```
 
 Start `BikePointCacher`,
 ```python
-cacher.start(upload_loop_wait_time, download_loop_wait_time, units, upload_loops,
-             remote_folder_id=remote_folder_id, verbose=True)
+cacher.start()
 ```
 
 Version information

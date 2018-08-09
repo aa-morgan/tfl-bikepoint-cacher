@@ -1,9 +1,0 @@
-[TFL]
-api_id = xxxxxxxx
-api_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-[PARAMS]
-upload_loop_wait_time = 60
-download_loop_wait_time = 5
-units = minutes
-upload_loops = -1
