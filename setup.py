@@ -10,7 +10,9 @@ setup(name='TfL-BikePoint-Cacher',
         packages=['bikepointcacher'],
         install_requires=[
             'tqdm',
-            'pandas'
+            'pandas',
+            'oauth2client',
+            'google-api-python-client'
         ],
         include_package_data=True,
         zip_safe=False)
