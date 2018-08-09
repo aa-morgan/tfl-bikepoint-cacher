@@ -47,6 +47,10 @@ python setup.py install
 
 3. Obtain an `api_id` and `api_key` from the ([`TfL developer site`](https://api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
 
+4. This first time you run this code you will be prompted to grant access to your Google Drive. Once granted, a `token.json` file will appear in the `config/` directory. This step fails if you run the code through a Jupyter notebook, therefore in order to obtain the `token.json` you must run the Python script `bikepoint_cacher.py`.
+
+5. You will also be required to enable the `Drive API`. The first time you run `bikepoint_cacher.py` an error will contain a URL to enable this API. Wait 1-2 minutes then run the code again and it should work.
+
 Basic usage
 -------
 Import libraries,
