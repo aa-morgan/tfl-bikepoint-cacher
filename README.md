@@ -57,16 +57,16 @@ python bikepoint_cacher.py
 
 Basic usage
 -------
-Import libraries,
+Import library,
 ```python
 from bikepointcacher import BikePointCacher, mkdir_GDrive
 ```
-Define `config.txt` filepath,
+Define filepath for `config.txt`,
 ```python
 config_filepath = '../config/config.txt'
 ```
 
-Make remote Google Drive folder,
+Create remote Google Drive folder,
 ```python
 remote_folder_path = 'TfL_bikepoint_cache'
 remote_folder_id = mkdir_GDrive(remote_folder_path)
