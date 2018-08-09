@@ -1,7 +1,7 @@
 from bikepointcacher import BikePointCacher, mkdir_GDrive
 import configparser
 
-# Load TfL API credentials from config fiel
+# Load TfL API credentials from config file
 config = configparser.ConfigParser()
 config.read('../config.txt')
 api_id = config['TFL']['api_id']
@@ -15,7 +15,7 @@ print('Folder ID: {}'.format(remote_folder_id))
 # Instantiate BikePointCacher
 cacher = BikePointCacher(api_id, api_key)
 
-# Load parameters from config fiel
+# Load parameters from config file
 upload_loop_wait_time = int(config['PARAMS']['upload_loop_wait_time'])
 download_loop_wait_time = int(config['PARAMS']['download_loop_wait_time'])
 units = config['PARAMS']['units']

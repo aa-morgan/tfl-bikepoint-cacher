@@ -37,17 +37,21 @@ cd tfl-bikepoint-cacher
 python setup.py install
 ```
 
+Obtain an `api_id` and `api_key` from the ([`TfL developer site`](api.tfl.gov.uk)), and copy them into the `config.txt` configuration file.
+
 Basic usage
 -------
 Import libraries,
 ```python
 from bikepointcacher import BikePointCacher, mkdir_GDrive
+import configparser
 ```
-Define TfL credentials, ([`TfL developer site`](api.tfl.gov.uk))
-
+Load TfL Unified API credentials from `config.txt` file, 
 ```python
-api_id = 'xxxxxxxx'
-api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+config = configparser.ConfigParser()
+config.read('../__dev__config.txt')
+api_id = config['TFL']['api_id']
+api_key = config['TFL']['api_key']
 ```
 
 Make remote Google Drive folder,
@@ -60,12 +64,17 @@ Instantiate `BikePointCacher` object,
 ```python
 cacher = BikePointCacher(api_id, api_key)
 ```
+
+Load `BikePointCacher` parameters from `config.txt` file,
+```python
+upload_loop_wait_time = int(config['PARAMS']['upload_loop_wait_time'])
+download_loop_wait_time = int(config['PARAMS']['download_loop_wait_time'])
+units = config['PARAMS']['units']
+upload_loops = int(config['PARAMS']['upload_loops'])
+```
+
 Start `BikePointCacher`,
 ```python
-upload_loop_wait_time = 60
-download_loop_wait_time = 5
-units = 'minutes'
-upload_loops = -1 # -1 == Infinite
 cacher.start(upload_loop_wait_time, download_loop_wait_time, units, upload_loops,
              remote_folder_id=remote_folder_id, verbose=True)
 ```
