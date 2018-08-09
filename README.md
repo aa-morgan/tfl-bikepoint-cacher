@@ -69,7 +69,7 @@ config_filepath = '../config/config.txt'
 Create remote Google Drive folder,
 ```python
 remote_folder_path = 'TfL_bikepoint_cache'
-remote_folder_id = mkdir_GDrive(remote_folder_path)
+remote_folder_id = mkdir_GDrive(config_filepath, remote_folder_path)
 ```
 
 Instantiate `BikePointCacher` object,
